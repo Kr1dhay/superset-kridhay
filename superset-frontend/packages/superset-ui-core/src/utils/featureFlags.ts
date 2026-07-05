@@ -39,8 +39,6 @@ export enum FeatureFlag {
   DatasetFolders = 'DATASET_FOLDERS',
   DateRangeTimeshiftsEnabled = 'DATE_RANGE_TIMESHIFTS_ENABLED',
   DisableEmbeddedSupersetLogout = 'DISABLE_EMBEDDED_SUPERSET_LOGOUT',
-  /** @deprecated */
-  DrillToDetail = 'DRILL_TO_DETAIL',
   DrillBy = 'DRILL_BY',
   DynamicPlugins = 'DYNAMIC_PLUGINS',
   EmbeddableCharts = 'EMBEDDABLE_CHARTS',

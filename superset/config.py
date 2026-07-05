@@ -899,9 +899,6 @@ DEFAULT_FEATURE_FLAGS: dict[str, bool] = {
     # These flags default to True and will be removed in a future major
     # release. Set to True in your config to avoid unexpected changes.
     # -----------------------------------------------------------------
-    # Enable drill-to-detail functionality in charts
-    # @lifecycle: deprecated
-    "DRILL_TO_DETAIL": True,
     # Allow JavaScript in chart controls. WARNING: XSS security vulnerability!
     # @lifecycle: deprecated
     "ENABLE_JAVASCRIPT_CONTROLS": False,

@@ -32,8 +32,6 @@ import {
   Behavior,
   getChartMetadataRegistry,
   VizType,
-  isFeatureEnabled,
-  FeatureFlag,
   QueryFormData,
   AnnotationData,
   DataMask,
@@ -219,10 +217,7 @@ function ChartRendererComponent({
   // it stale. (Pre-refactor this was a class-instance field recomputed on
   // every render — preserve that semantic by using a memo here.)
   const showContextMenu = useMemo(
-    () =>
-      source === ChartSource.Dashboard &&
-      !suppressContextMenu &&
-      isFeatureEnabled(FeatureFlag.DrillToDetail),
+    () => source === ChartSource.Dashboard && !suppressContextMenu,
     [source, suppressContextMenu],
   );
 
