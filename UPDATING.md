@@ -24,6 +24,8 @@ assists people when migrating to a new version.
 
 ## Next
 
+- Removed the deprecated `ENABLE_JAVASCRIPT_CONTROLS` feature flag. The previous default value was `False`, so JavaScript controls in deck.gl chart form data remain permanently disabled and the associated keys are always stripped from incoming requests.
+
 - Removed the deprecated `AVOID_COLORS_COLLISION` feature flag. The previous value of the feature flag was `True` and now the feature is permanently enabled, so charts always avoid color collisions by assigning distinct colors.
 
 - [39925](https://github.com/apache/superset/pull/39925): URL prefixing for `SUPERSET_APP_ROOT` subdirectory deployments is now handled automatically by helpers in `src/utils/navigationUtils` (`openInNewTab`, `redirect`, `getShareableUrl`, `<AppLink>`). Direct imports of `ensureAppRoot` / `makeUrl` from `src/utils/pathUtils` are forbidden outside `navigationUtils.ts` (enforced by a static-invariant test); contributors writing new code should use the focused helpers instead. No runtime behaviour change for existing callers — all 19 prior call sites have been migrated and four pre-existing double-prefix and missing-prefix bugs are fixed as part of the migration.
